@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
  
+import { Beats } from '../api/beats.js';
+import { Games } from '../api/games.js';
+
 import NavBar from './NavBar.jsx';
 import Dice from './Dice.jsx';
  
