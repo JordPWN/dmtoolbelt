@@ -1,0 +1,130 @@
+.nav {
+  padding: 0 10px 0 10px; }
+
+.toggle-box {
+  display: none;
+  transition: all 1s; }
+  .toggle-box + label {
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    line-height: 21px;
+    margin-bottom: 5px; }
+    .toggle-box + label + p {
+      height: 0;
+      margin-bottom: 10px;
+      overflow: hidden; }
+    .toggle-box + label:before {
+      background-color: #4F5150;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      color: #FFFFFF;
+      content: "+";
+      display: block;
+      float: left;
+      font-weight: bold;
+      height: 20px;
+      line-height: 20px;
+      margin-right: 5px;
+      text-align: center;
+      width: 20px; }
+      .tray-toggle .toggle-box + label:before {
+        content: ">";
+        background-color: yellow; }
+  .toggle-box:checked + label + p {
+    height: auto;
+    overflow: scroll; }
+  .toggle-box:checked + label:before {
+    content: "\2212"; }
+
+.content-wrapper {
+  margin: 15px; }
+
+.tray {
+  z-index: 5;
+  background: transparent;
+  transition: all 1s;
+  color: white;
+  position: fixed;
+  top: 50px;
+  height: calc(100vh - 50px);
+  width: 50vw;
+  max-width: 50vw; }
+  .tray li:hover {
+    background-color: darkgrey; }
+  .tray:hover {
+    background: #c8c8c8; }
+  .tray.on-left {
+    left: calc(-50vw + 40px); }
+    .tray.on-left.active {
+      background: #c8c8c8;
+      display: block;
+      left: 0px; }
+  .tray.on-right {
+    right: calc(-50vw + 40px); }
+    .tray.on-right.active {
+      background: #c8c8c8;
+      right: 0px; }
+
+.tray * .active * .tray-toggle:before {
+  content: "\2212"; }
+
+.tray-check {
+  display: none; }
+
+.tray-content {
+  height: calc(100vh - 50px);
+  width: 0;
+  overflow: hidden; }
+  .tray-content.active {
+    display: block;
+    width: 80%; }
+    *.on-left .tray-content.active {
+      float: right;
+      padding: 15px 55px 15px 15px;
+      border-left: 1px solid white; }
+    *.on-right .tray-content.active {
+      float: left;
+      padding: 15px 15px 15px 55px;
+      border-right: 1px solid white; }
+
+.tray-menu {
+  margin: 25% 0 25% 0;
+  min-width: 10%;
+  max-width: calc(100% - 40px); }
+  *.on-right .tray-menu {
+    float: right; }
+  *.on-left .tray-menu {
+    float: left; }
+  .tray-menu ul li {
+    padding: 15px; }
+
+li[data-active=true] {
+  background-color: navy; }
+
+.tray-toggle {
+  position: absolute;
+  transition: all 1s;
+  float: both;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  width: 40px;
+  resize: horizontal;
+  overflow: hidden;
+  height: calc(100vh - 50px); }
+  .tray-toggle:hover {
+    background: black; }
+  .tray-toggle.on-left {
+    left: calc(100% - 40px); }
+  .tray-toggle.on-right {
+    float: left; }
+  .tray-toggle:before {
+    line-height: 100vh;
+    color: white;
+    content: "+"; }
+  .tray-toggle ul {
+    margin: 25% 0 25% 0;
+    color: green; }
+
+/*# sourceMappingURL=style.css.map */

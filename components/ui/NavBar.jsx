@@ -1,9 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 
+import Tray from "./Tray.jsx";
+
 export default class NavBar extends Component {
 
 	render() {
 		return (
+			<div className="wrapper">
 				<nav className="nav">
 					<div className="container">
 						<div className="nav-left">
@@ -18,6 +21,9 @@ export default class NavBar extends Component {
 						</div>
 					</div>
 				</nav>
+				<Tray side="on-left"/>
+				<Tray side="on-right"/>
+			</div>
 			)
 	}
 }
