@@ -27,14 +27,14 @@ export default class Tray extends Component {
 		} 
 	}
 
-	renderContent(){
-		var openMenu = this.state.openMenu;
-		if (this.loadedTray === ""){
-			this.setState({loadedTray:"active"});
-		}
-		if (openMenu === "Dice") {
+	loadContent(tray){
+		this.setState({openMenu: tray});
+	}
+
+	renderContent(tray=""){
+		if (tray === "dice") {
 			return <Dice />;
-		}else	if (openMenu === "Story") {
+		}else	if (tray === "story") {
 			return <Story />;
 		}else{
 			return null;
@@ -55,7 +55,7 @@ export default class Tray extends Component {
 						</ul>
 					</div>
 					<div className={"tray-content " + this.trayContent()}>
-						<Dice />
+						{this.renderContent(this.state.openMenu)}
 					</div>
 					<div className={"tray-toggle " + this.props.side} onClick={this.toggleTray.bind(this)}></div>
 				</div>

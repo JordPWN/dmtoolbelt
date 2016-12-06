@@ -15,7 +15,7 @@ export default class App extends Component {
     return (
       <div className="page-container">
       <NavBar />
-      <Dice />
+      <CombatTracker />
       </div>
     );
   }

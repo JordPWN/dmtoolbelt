@@ -1,6 +1,9 @@
 .nav {
 	padding: 0 10px 0 10px;
 }
+html {
+	font-family: sans-serif; 
+}
 
 .toggle-box {
 
@@ -59,7 +62,7 @@
 	z-index: 5;
 	background: rgba(0, 0, 0, 0.0);
 	transition:all 1s;
-	color: white;
+	color: black;
 	position: fixed;
 	top: 50px;
 	height: calc(100vh - 50px);
@@ -68,6 +71,7 @@
 	li {
 		&:hover {
 			background-color: darkgrey;
+			color: white;
 		}
 	}
 	&:hover {
@@ -139,9 +143,16 @@
 	}
 }
 
-li[data-active=true]{
-	background-color: navy;
-}
+	li[data-active=true]{
+		background-color: rgba(50,50,50,1);
+		// font-weight: bold;
+		color: white;
+		&:hover{
+			background-color: navy;
+			font-weight: bold;
+		}
+	}	
+
 
 .tray-toggle {
 	position: absolute;
