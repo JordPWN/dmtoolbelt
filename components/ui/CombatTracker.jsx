@@ -1,4 +1,16 @@
 import React, { Component, PropTypes } from 'react';
+import { DragDropContext, DragSource } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+
+import Initiative from "./CombatTracker/Initiative.jsx";
+
+const cardSource = {
+  beginDrag(props) {
+    return {
+      text: props.text
+    };
+  }
+};
 
 export default class CombatTracker extends Component {
 

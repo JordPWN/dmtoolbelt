@@ -1,6 +1,9 @@
 .nav {
   padding: 0 10px 0 10px; }
 
+html {
+  font-family: sans-serif; }
+
 .toggle-box {
   display: none;
   transition: all 1s; }
@@ -45,14 +48,15 @@
   z-index: 5;
   background: transparent;
   transition: all 1s;
-  color: white;
+  color: black;
   position: fixed;
   top: 50px;
   height: calc(100vh - 50px);
   width: 50vw;
   max-width: 50vw; }
   .tray li:hover {
-    background-color: darkgrey; }
+    background-color: darkgrey;
+    color: white; }
   .tray:hover {
     background: #c8c8c8; }
   .tray.on-left {
@@ -101,7 +105,11 @@
     padding: 15px; }
 
 li[data-active=true] {
-  background-color: navy; }
+  background-color: #323232;
+  color: white; }
+  li[data-active=true]:hover {
+    background-color: navy;
+    font-weight: bold; }
 
 .tray-toggle {
   position: absolute;
